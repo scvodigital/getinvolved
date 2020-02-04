@@ -14,7 +14,6 @@ $mdc-theme-complimentary-light: #ecf2e9;
 $mdc-theme-complimentary-dark: #d9e6d4;
 
 $mdc-theme-footer: #244B5A;
-$mdc-theme-footer-light: #FEF9F9;
 
 $mdc-theme-error: #A9201E;
 
@@ -50,7 +49,7 @@ html {
 }
 
 body {
-  background-color: $mdc-theme-footer-light;
+  background-color: $mdc-theme-footer;
   word-break: break-word;
   -webkit-tap-highlight-color: transparent;
 }
@@ -73,7 +72,7 @@ html {
   line-height: 1.4;
 }
 body {
-  background: $mdc-theme-footer-light;
+  background: $mdc-theme-footer;
   min-height: 100%;
   padding: 0;
   margin: 0;
@@ -981,13 +980,12 @@ footer {
     }
   }
   .footer-copyright {
-    background-color: $mdc-theme-footer-light;
     p {
-      color: $mdc-theme-footer;
+      color: white;
       font-size: 0.9rem;
       margin-bottom: 0;
       a {
-        color: $mdc-theme-footer;
+        color: white;
       }
     }
     .brand-logo img {
@@ -999,7 +997,7 @@ footer {
     position: relative;
   }
   .footer-main {
-    padding: $unit/2 0 $unit;
+    padding: $unit 0 0;
     // border-top: $unit solid $mdc-theme-primary;
     // background-image: linear-gradient(
     // -120deg,
