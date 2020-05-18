@@ -1,6 +1,6 @@
 {
   "name": "@scvo/getinvolved",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Site configuration and assets for getinvolved.scot",
   "main": "index.js",
   "scripts": {
