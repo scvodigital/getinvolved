@@ -2,6 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G1JQ2NYM6X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-G1JQ2NYM6X', {
+      'send_page_view': true,
+      'anonymize_ip': true,
+      'cookieDomain': 'none',
+      'custom_map': {
+        'dimension1': 'hit_type',
+        'dimension2': 'parent_document'
+      }
+    });
+  </script>
+
   {{!-- <base href="/{{#if request.params.path}}{{replace request.params.path '_' ''}}{{else}}{{/if}}"> --}}
   {{{layoutParts.head}}}
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,14 +38,7 @@
   <link type="text/css" rel="stylesheet" href="{{~>asset_url url='libraries/fontawesome-pro/css/all.min.css'~}}">
 
   <link type="text/css" rel="stylesheet" href="{{~>asset_url url='main.css'~}}">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-3467930-4"></script>
   <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-3467930-4', { 'send_page_view': true, 'anonymize_ip': true });
-
   {{#ifAny request.params.query.debug (compare request.url.hostname "getinvolved.local") ~}}
   console.log('#### DEBUG MODE ON ####');
   console.log('Request:', {{{regexReplace (regexReplace (stringify request) "(<\/script)" "gi" '</scr\" + \"ipt') "(\r|\n)" "gi" ""}}});
